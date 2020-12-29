@@ -33,7 +33,7 @@
   font-weight: 600;
   text-transform: capitalize;
   color: rgba(var(--color-black), 0.9);
-  margin: 1.3rem 5rem;
+  margin: 1.3rem 0;
 }
 .heading-secondary span {
   color: var(--color-primary-light);
@@ -155,6 +155,7 @@ body {
     url("./images/back-2.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   margin-top: -10rem;
   padding-top: 10rem;
 }
@@ -164,22 +165,23 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: transparent;
 }
 
 .user-card {
   background-color: var(--color-white);
-  padding: 2rem 0 3rem 0;
+  padding: 3rem 0 3rem 0;
   border-radius: 5px;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
 }
 
 .user-card img {
   height: 11rem;
-  float: left;
   border-radius: 50%;
   margin: 0 2rem;
-  margin-top: 1rem;
 }
 
 .user-card .text {
@@ -240,8 +242,75 @@ body {
   );
 }
 
-/* @media (min-width: 30rem) and (max-width: 50rem) {
-  body {
-    font-size: 5px;
+@media (max-width: 500px) {
+  .header_box {
+    padding: 1rem 2rem;
+    width: 70%;
   }
-} */
+  .search-form button {
+    height: 1.8rem;
+    padding: 0 0.8rem;
+  }
+  .search-form input {
+    height: 1.6rem;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+  .top-search {
+    display: block;
+  }
+
+  .top-search button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+  }
+
+  .user-info {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  .user-card {
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .user-card img {
+    height: 8rem;
+    margin: 0 1rem;
+  }
+
+  .user-card .text {
+    text-align: left;
+  }
+
+  .user-stat div {
+    height: 6rem;
+    width: 6rem;
+    margin: 0 1rem;
+    box-shadow: none;
+  }
+
+  .user-stat div h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .user-stat div h2 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+}
